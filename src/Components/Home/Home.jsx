@@ -3,8 +3,8 @@ import React from 'react';
 import './Home.css';
 import arrowIcon from '../../assets/icons/arrow.png';
 import instagramIcon from '../../assets/icons/instagram.png';
-import linkedinIcon from '../../assets/icons/linkedin.png';
-import facebookIcon from '../../assets/icons/facebook.png';
+import linkedinIcon from '../../assets/icons/Linkedin.png';
+import facebookIcon from '../../assets/icons/Facebook.png';
 
 function Home() {
     return (
