@@ -1,0 +1,193 @@
+.uxui-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px;
+    background-color: #0B1D26;
+}
+
+.uxui-design {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    color: #ccd6f6;
+}
+
+.uxui-design.reverse {
+    flex-direction: row-reverse;
+}
+
+.uxui-text {
+    max-width: 40%;
+    margin-right: 40px;
+}
+
+.uxui-design.reverse .uxui-text {
+    margin-right: 0;
+    margin-left: 5%;
+}
+
+.uxui-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.uxui-number-img {
+    width: 190px;
+    margin-left: 0;
+}
+
+.uxui-text h3 {
+    color: #3fc1c9;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    margin-top: 4%;
+}
+
+.uxui-text h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.uxui-text p {
+    width: 80%;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.uxui-more-info {
+    color: #3fc1c9;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.uxui-more-info::after {
+    content: "→";
+    margin-left: 5px;
+}
+
+.uxui-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Tablets grandes */
+@media screen and (max-width: 1024px) {
+    .uxui-text {
+        max-width: 45%;
+    }
+
+    .uxui-number-img {
+        width: 150px;
+    }
+
+    .uxui-text h1 {
+        font-size: 2rem;
+    }
+
+    .uxui-text p {
+        font-size: 1.1rem;
+        width: 90%;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .uxui-container {
+        gap: 30px;
+    }
+
+    .uxui-design,
+    .uxui-design.reverse {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .uxui-text {
+        max-width: 90%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .uxui-design.reverse .uxui-text {
+        margin-left: 0;
+    }
+
+    .uxui-header {
+        justify-content: center;
+    }
+
+    .uxui-number-img {
+        width: 130px;
+    }
+
+    .uxui-text p {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .uxui-image img {
+        max-width: 300px;
+    }
+}
+
+/* Móviles */
+@media screen and (max-width: 480px) {
+    .uxui-container {
+        gap: 20px;
+        padding: 5px;
+    }
+
+    .uxui-text {
+        max-width: 95%;
+    }
+
+    .uxui-number-img {
+        width: 100px;
+    }
+
+    .uxui-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .uxui-text h3 {
+        font-size: 0.9rem;
+    }
+
+    .uxui-text p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .uxui-image img {
+        max-width: 280px;
+    }
+}
+
+/* Móviles pequeños */
+@media screen and (max-width: 320px) {
+    .uxui-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .uxui-number-img {
+        width: 80px;
+    }
+
+    .uxui-image img {
+        max-width: 250px;
+    }
+
+    .uxui-text p {
+        font-size: 0.9rem;
+    }
+}

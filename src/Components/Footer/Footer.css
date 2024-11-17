@@ -1,0 +1,101 @@
+.footer {
+    background-color: #0B1418;
+    color: #fff;
+    padding: 6rem 2rem; 
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem; 
+}
+
+.footer-section {
+    flex: 1;
+    font-size: 1.25rem; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+    margin-bottom: 2rem;
+}
+
+
+.logo-text {
+    color: #00B4D8;
+    font-size: 2.5rem; 
+    font-weight: 600;
+}
+
+.contact-info {
+    color: #fff;
+    font-size: 1.2rem; 
+    line-height: 1.8;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 1.2rem; 
+    margin-bottom: 1.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 1.5rem; 
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem; 
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #00B4D8;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .footer {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .responsive {
+        display: none;
+    }
+}

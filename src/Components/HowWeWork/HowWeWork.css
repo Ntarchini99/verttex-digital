@@ -1,0 +1,175 @@
+.how-we-work {
+    background-color: #0B1D26;
+    color: white;
+    padding: 6rem 2rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 400;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.work-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Animación secuencial para cada item */
+.work-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.work-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.work-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.work-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.work-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.work-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.subtitle {
+    color: #00B4D8;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2rem;
+    height: 2px;
+    background-color: #00B4D8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.work-item:hover .subtitle::after {
+    transform: scaleX(1);
+}
+
+.description {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.work-item:hover .description {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .work-grid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .how-we-work {
+        padding: 4rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .how-we-work {
+        padding: 3rem 1rem;
+        min-height: auto;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
