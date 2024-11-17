@@ -2,7 +2,7 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import './FAQ.css';
+import './Faq.css';
 import profileImage from '../../assets/img/faq-image.png';
 
 const FAQItem = ({ question, isOpen, onClick }) => {
