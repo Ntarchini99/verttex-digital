@@ -8,7 +8,6 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="footer-section">
                     <div className="logo-container">
-                        <div className="logo-circle"></div>
                         <h2 className="logo-text">Vertex Digital</h2>
                     </div>
                     <div className="contact-info">

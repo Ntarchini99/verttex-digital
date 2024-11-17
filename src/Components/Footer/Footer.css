@@ -5,6 +5,11 @@
     width: 100%;
 }
 
+.responsive{
+    display: flex;
+    gap: 12rem;
+}
+
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -57,7 +62,7 @@
 .footer-section ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem; 
+    font-size: 1rem; 
     transition: color 0.3s ease;
 }
 
