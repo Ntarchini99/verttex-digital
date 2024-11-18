@@ -22,8 +22,8 @@ function RoutesConfig() {
                 <Route path="/" element={
                     <>
                         <Home />
-                        <HowWeWork />
                         <Services />
+                        <HowWeWork />
                         <Carousel />
                         <FAQ />
                         <Comments />

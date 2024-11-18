@@ -64,12 +64,14 @@ const Comments = () => {
                     →
                 </button>
 
-                <div className="testimonialsGrid">
+                <div
+                    className="testimonialsGrid"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                >
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
                             className={`testimonialCard ${index === currentIndex ? 'active' : ''}`}
-                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                         >
                             <div className="stars">
                                 {[...Array(testimonial.stars)].map((_, i) => (
@@ -98,6 +100,7 @@ const Comments = () => {
                         <div
                             key={index}
                             className={`indicator ${index === currentIndex ? 'active' : ''}`}
+                            onClick={() => setCurrentIndex(index)}
                         />
                     ))}
                 </div>

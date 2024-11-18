@@ -223,4 +223,10 @@
         width: 30px;
         height: 30px;
     }
+
+    .social-sidebar {
+        padding: 1rem;
+        gap: 2.5rem;
+        
+    }
 }

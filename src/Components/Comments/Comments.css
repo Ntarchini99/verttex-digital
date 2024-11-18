@@ -141,73 +141,92 @@
 
 @media (max-width: 767px) {
   .testimonialsContainer {
-      padding: 4rem 1rem;
+    padding: 4rem 1rem;
   }
 
   .testimonials-wrapper {
-
-      padding: 2rem 3rem;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
   }
 
   .testimonialsGrid {
-      flex-wrap: nowrap;
-      overflow-x: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: transform 0.3s ease;
   }
 
   .testimonialCard {
-      min-width: 100%;
-      flex: 0 0 100%;
+    min-width: calc(100% - 4rem);
+    flex: 0 0 calc(100% - 3.7rem);
+    margin: 0 1rem;
+    box-sizing: border-box;
   }
 
   .nav-button {
-      display: block;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .nav-button.prev {
+    left: 0.5rem;
+  }
+
+  .nav-button.next {
+    right: 0.5rem;
   }
 
   .page-indicators {
-      display: flex;
+    display: flex;
+    margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .testimonialsContainer {
-      padding: 8rem 2rem;
+    padding: 8rem 2rem;
   }
 
   .testimonials-wrapper {
-      padding: 0;
+    padding: 0;
   }
 
   .testimonialsGrid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   .testimonialCard {
-      min-width: unset;
-      width: 100%;
-      transform: none !important;
+    min-width: unset;
+    width: 100%;
+    transform: none !important;
   }
 }
 
 @media (min-width: 1025px) {
   .testimonialsContainer {
-      padding: 12rem;
+    padding: 12rem;
   }
 
   .testimonials-wrapper {
-      padding: 0;
+    padding: 0;
   }
 
   .testimonialsGrid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
 
   .testimonialCard {
-      min-width: unset;
-      width: 100%;
-      transform: none !important;
+    min-width: unset;
+    width: 100%;
+    transform: none !important;
   }
 }

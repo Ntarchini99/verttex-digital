@@ -18,7 +18,7 @@ function Home() {
                 </a>
             </div>
             <div className="home-arrow">
-                <a href="#how"><img src={arrowIcon} alt="Flecha" className="arrow-icon" /></a>
+                <a href="#services"><img src={arrowIcon} alt="Flecha" className="arrow-icon" /></a>
             </div>
             <div className="social-sidebar">
                 <a href="https://www.instagram.com/verttexdigital/" target="_blank" rel="noopener noreferrer">

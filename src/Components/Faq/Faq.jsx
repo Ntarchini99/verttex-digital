@@ -10,7 +10,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         <div className={`faq-item ${isOpen ? 'open' : ''}`} onClick={onClick}>
             <div className="faq-question">
                 <span>{question}</span>
-                <span className="arrow">{isOpen ? '▼' : '▶'}</span>
+                <span className="arrow">{isOpen ? '▼' : '▼'}</span>
             </div>
             {isOpen && (
                 <div className="faq-answer">
