@@ -107,19 +107,19 @@
 
 @media (max-width: 428px) {
     .logo-text {
-        font-size: 2.7rem;
-    }
-
-    .contact-info p {
-        font-size: 1.4rem;
-    }
-
-    .footer-section h3 {
         font-size: 2rem;
     }
 
+    .contact-info p {
+        font-size: 1.2rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.8rem;
+    }
+
     .footer-section {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .hide-on-small {
