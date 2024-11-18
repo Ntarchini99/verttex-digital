@@ -13,7 +13,7 @@ const ContactForm = () => {
             toast.success('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
             setTimeout(() => {
                 reset();
-            }, 1000);  
+            }, 1000);
         }
         if (state.errors && state.errors.length > 0) {
             toast.error('Hubo un error al enviar el formulario. Intenta nuevamente.');

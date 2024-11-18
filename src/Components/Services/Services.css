@@ -4,6 +4,7 @@
     gap: 40px;
     padding: 10px;
     background-color: #0B1D26;
+    margin-bottom: 120px;
 }
 
 .uxui-design {
@@ -37,7 +38,7 @@
 
 .uxui-number-img {
     width: 190px;
-    margin-left: 0;
+    margin-left: -10%;
 }
 
 .uxui-text h3 {
@@ -45,6 +46,7 @@
     font-size: 1rem;
     letter-spacing: 1.5px;
     margin-top: 4%;
+    letter-spacing: 5px;
 }
 
 .uxui-text h1 {
@@ -79,8 +81,7 @@
     border-radius: 8px;
 }
 
-/* Tablets grandes */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
     .uxui-text {
         max-width: 45%;
     }
@@ -99,7 +100,26 @@
     }
 }
 
-/* Tablets */
+@media screen and (max-width: 1024px) {
+    .uxui-text {
+        max-width: 45%;
+    }
+
+    .uxui-number-img {
+        width: 120px;
+        margin-left: -8%;
+    }
+
+    .uxui-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .uxui-text p {
+        font-size: 1rem;
+        width: 90%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .uxui-container {
         gap: 30px;
@@ -140,7 +160,6 @@
     }
 }
 
-/* Móviles */
 @media screen and (max-width: 480px) {
     .uxui-container {
         gap: 20px;
@@ -173,7 +192,6 @@
     }
 }
 
-/* Móviles pequeños */
 @media screen and (max-width: 320px) {
     .uxui-text h1 {
         font-size: 1.5rem;

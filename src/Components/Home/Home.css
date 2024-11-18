@@ -26,19 +26,20 @@
     font-size: 5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    margin-left: -18%;
+    margin-left: -24%;
     margin-top: 15%;
 }
 
 .home-subtitle {
     width: 61%;
-    margin-left: 0;
-    font-size: 1.5rem;
+    margin-left: -8%;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .home-button {
-    margin-left: -52%;
+    margin-left: -62%;
     padding: 0.8rem 2rem;
     background-color: #FFFFFF;
     border: none;
@@ -67,16 +68,19 @@
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
 }
 
 .social-sidebar {
-    position: absolute; /* Cambiar de fixed a absolute */
+    position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
@@ -85,7 +89,7 @@
     gap: 3rem;
     padding: 2rem;
     border-radius: 0 8px 8px 0;
-    z-index: 10; /* Si es necesario, ajusta el z-index */
+    z-index: 10;
     cursor: pointer;
 }
 
@@ -100,45 +104,84 @@
     transform: scale(1.1);
 }
 
-/* Tablets */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
     .home-title {
-        font-size: 3.5rem;
-        margin-left: 0;
+        font-size: 3rem;
+        margin-left: -28%;
     }
-    
+
     .home-subtitle {
-        width: 80%;
+        width: 60%;
         font-size: 1.2rem;
     }
-    
+
     .home-button {
-        margin-left: 0;
+        margin-left: -58%;
     }
-    
+
+}
+
+@media screen and (max-width: 1024px) {
+    .home {
+        margin-top: -5%;
+        height: 80.2vh;
+    }
+
+    .home-title {
+        font-size: 3rem;
+        margin-left: -24%;
+        margin-top: 20%;
+    }
+
+    .home-subtitle {
+        width: 70%;
+        font-size: 1rem;
+        margin-left: -10%;
+    }
+
+    .home-button {
+        margin-left: -65%;
+    }
+
     .social-sidebar {
         padding: 1rem;
         gap: 2rem;
     }
+
+    .arrow-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: -95%;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+        transition: transform 0.3s;
+    }
 }
 
-/* Móviles grandes */
 @media screen and (max-width: 768px) {
     .home-title {
         font-size: 2.5rem;
         margin-top: 20%;
+        margin-left: -35%;
     }
-    
+
     .home-subtitle {
         width: 90%;
         font-size: 1rem;
     }
-    
+
+    .home-button {
+        margin-left: -79%;
+    }
+
     .arrow-icon {
         width: 40px;
         height: 40px;
     }
-    
+
     .social-sidebar {
         position: relative;
         flex-direction: row;
@@ -148,31 +191,33 @@
         padding: 1rem;
         gap: 1.5rem;
         background: none;
-        margin-top: 12%;
+        margin-top: 8%;
     }
 }
 
-/* Móviles pequeños */
 @media screen and (max-width: 480px) {
     .home-title {
         font-size: 2rem;
-        margin-top: 25%;
+        margin-top: 35%;
+        margin-left: 5%;
     }
-    
+
     .home-subtitle {
         width: 95%;
         font-size: 0.9rem;
+        margin-left: 5%;
     }
-    
+
     .home-button {
         padding: 0.6rem 1.5rem;
         font-size: 0.9rem;
+        margin-left: -60%;
     }
-    
+
     .home-arrow {
         bottom: 60px;
     }
-    
+
     .arrow-icon {
         width: 30px;
         height: 30px;

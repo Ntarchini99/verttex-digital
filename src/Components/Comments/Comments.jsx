@@ -12,7 +12,7 @@ const Comments = () => {
             content: "Verttex es una agencia digital excepcional. Su equipo de expertos en UX/UI, diseño gráfico y desarrollo web entregó un proyecto innovador y funcional que superó nuestras expectativas. Su profesionalismo y atención al detalle son incomparables. ¡Altamente recomendables!",
             author: "Chris López",
             date: "01 Agosto de 2024",
-            avatar: "/api/placeholder/40/40"
+            avatar: "https://randomuser.me/api/portraits/men/1.jpg"
         },
         {
             stars: 5,
@@ -20,7 +20,7 @@ const Comments = () => {
             content: "Verttex nos ayudó a transformar nuestra presencia digital con un diseño moderno y experiencia de usuario intuitiva. ¡Gracias por la dedicación y compromiso!",
             author: "Roberto Flores",
             date: "27 Julio de 2023",
-            avatar: "/api/placeholder/40/40"
+            avatar: "https://randomuser.me/api/portraits/men/2.jpg"
         },
         {
             stars: 5,
@@ -28,7 +28,7 @@ const Comments = () => {
             content: "Encontramos en Verttex una agencia integral que cubrió todas nuestras necesidades digitales: diseño, desarrollo y comunidad. Su equipo es amable, eficiente y siempre dispuesto ayudar. ¡Excelente elección para cualquier negocio!",
             author: "Daniel Cardenas",
             date: "12 Diciembre de 2023",
-            avatar: "/api/placeholder/40/40"
+            avatar: "https://randomuser.me/api/portraits/men/3.jpg"
         },
         {
             stars: 5,
@@ -36,7 +36,7 @@ const Comments = () => {
             content: "Verttex nos ayudó a aumentar nuestra presencia en redes sociales y mejorar nuestra conversión gracias a su estrategia de comunidad y diseño UX/UI. Sus resultados son tangibles y su compromiso admirable. ¡Los recomiendo sin dudarlo!",
             author: "Carla Orozco",
             date: "10 Mayo de 2024",
-            avatar: "/api/placeholder/40/40"
+            avatar: "https://randomuser.me/api/portraits/women/1.jpg"
         }
     ];
 

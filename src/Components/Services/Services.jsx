@@ -15,28 +15,28 @@ const Services = () => {
             description: "Experiencias digitales que impulsan tu negocio. Nuestro enfoque en el diseño centrado en el usuario te garantiza que tu sitio web no solo se vea bien, sino que también sea altamente efectivo. Con un diseño responsivo, navegación sencilla y contenido personalizado, haremos que tu marca destaque en línea.",
             imgSrc: img01,
             numberImg: numero01,
-            startText: "Comenzar"
+            startText: "IMPULSA TU NEGOCIO"
         },
         {
             title: "Community Manager",
-            description: "Creamos sitios web optimizados para el rendimiento y la accesibilidad, asegurando que tu marca esté al alcance de todos los usuarios en cualquier dispositivo.",
+            description: "Gestión estrategica de redes sociales para crecer tu presencia digital.",
             imgSrc: img02,
             numberImg: numero02,
-            startText: "Comenzar Desarrollo Web"
+            startText: "DOMINA LAS REDES SOCIALES"
         },
         {
             title: "Desarrollo Web",
-            description: "Estrategias digitales personalizadas que aumentan la visibilidad y el alcance de tu negocio en línea, logrando una conexión auténtica con tus clientes.",
+            description: "Sitios web y aplicaciones personalzadas con tecnologías modernas.",
             imgSrc: img03,
             numberImg: numero03,
-            startText: "Comenzar Marketing Digital"
+            startText: "CODIFICAMOS TU SUEÑOS"
         },
         {
             title: "Diseño gráfico",
-            description: "Construimos una identidad de marca sólida y coherente, destacando tus valores y conectando emocionalmente con tu audiencia.",
+            description: "Creación  de soluciones visuales atractivas y funcionales, desde logotipos, carteles,  diseño de libros y revistas hasta  experiencias de marca.",
             imgSrc: img04,
             numberImg: numero04,
-            startText: "Comenzar Branding"
+            startText: "ILUSTRAMOS TUS PENSAMIENTOS"
         }
     ];
 
@@ -54,7 +54,7 @@ const Services = () => {
                         </div>
                         <h1>{section.title}</h1>
                         <p>{section.description}</p>
-                        <a href="#" className="uxui-more-info">Más info</a>
+                        <a href="#contact" className="uxui-more-info">Más info</a>
                     </div>
                     <div className="uxui-image">
                         <img src={section.imgSrc} alt={section.title} />

@@ -6,6 +6,7 @@
     background-color: #0B1D26;
     padding: 40px 0;
     overflow: hidden;
+    margin-bottom: 100px;
 }
 
 .card-container {
@@ -69,7 +70,10 @@
     color: #777;
 }
 
-/* Media Queries */
+.card-container:hover {
+    animation-play-state: paused;
+}
+
 @media (max-width: 768px) {
     .card {
         min-width: 300px;
@@ -101,9 +105,4 @@
         gap: 15px;
         padding: 10px;
     }
-}
-
-/* Pausa la animación al hacer hover */
-.card-container:hover {
-    animation-play-state: paused;
 }

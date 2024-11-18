@@ -90,7 +90,6 @@
   margin: 0;
 }
 
-/* Navegación */
 .nav-button {
   display: none;
   position: absolute;
@@ -119,7 +118,6 @@
   right: 10px;
 }
 
-/* Indicadores de página */
 .page-indicators {
   display: none;
   justify-content: center;
@@ -141,7 +139,6 @@
   background-color: white;
 }
 
-/* Media Queries - Mobile First */
 @media (max-width: 767px) {
   .testimonialsContainer {
     padding: 4rem 1rem;
@@ -170,7 +167,6 @@
   }
 }
 
-/* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
   .testimonialsContainer {
     padding: 8rem 2rem;
@@ -193,7 +189,6 @@
   }
 }
 
-/* Desktop */
 @media (min-width: 1025px) {
   .testimonialsContainer {
     padding: 12rem;

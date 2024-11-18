@@ -40,7 +40,7 @@ const HowWeWork = () => {
     <section className="how-we-work" id='how'>
       <div className="container">
         <h1 className="main-title">Como trabajamos</h1>
-        
+
         <div className="work-grid">
           {workSteps.map(step => (
             <div key={step.id} className="work-item">
