@@ -5,16 +5,18 @@ import React, { useState } from 'react';
 import './Faq.css';
 import profileImage from '../../assets/img/faq-image.png';
 
-const FAQItem = ({ question, isOpen, onClick }) => {
+const FAQItem = ({ question, answer, isOpen, onClick }) => {
     return (
         <div className={`faq-item ${isOpen ? 'open' : ''}`} onClick={onClick}>
             <div className="faq-question">
                 <span>{question}</span>
-                <span className="arrow">{isOpen ? '▼' : '▼'}</span>
+                <span className="arrow">{isOpen ? '▼' : '▶'}</span>
             </div>
-            <div className="faq-answer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+            {isOpen && (
+                <div className="faq-answer">
+                    <p>{answer}</p>
+                </div>
+            )}
         </div>
     );
 };
@@ -22,11 +24,23 @@ const FAQItem = ({ question, isOpen, onClick }) => {
 const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(null);
 
-    const questions = [
-        "¿Qué servicios ofreces?",
-        "¿Cuánto tiempo lleva un proyecto web típico?",
-        "¿Ofrecen servicios de mantenimiento?",
-        "¿Cuál es su proceso de diseño?"
+    const faqData = [
+        {
+            question: "¿Qué servicios ofreces?",
+            answer: "Ofrecemos servicios de desarrollo web, diseño gráfico, diseño UX UI y gestión de redes sociales adaptados a cada negocio o empresa."
+        },
+        {
+            question: "¿Cuánto tiempo lleva un proyecto web típico?",
+            answer: "Los plazos de los proyectos varían segun la complejidad del mismo. Un sitio web simple puede llevar de 2 a 4 semanas, mientras que los mas complejos pueden demorar de 2 a 3 meses."
+        },
+        {
+            question: "¿Ofrecen servicios de mantenimiento?",
+            answer: "Sí, ofrecemos paquetes de mantenimiento continuo para  mantener tu sitio web seguro, actualizado y funcionando de manera óptima."
+        },
+        {
+            question: "¿Cuál es su proceso de diseño?",
+            answer: "Nuestro proceso incluye una fase de investigación, creación de wireframes, conceptos de diseño, pruebas de usabilidad, e implementación final con retroalimentación del cliente en cada etapa"
+        }
     ];
 
     const handleClick = (index) => {
@@ -43,10 +57,11 @@ const FAQ = () => {
             <div className="faq-content">
                 <h1>Preguntas Frecuentes</h1>
                 <div className="faq-list">
-                    {questions.map((question, index) => (
+                    {faqData.map((item, index) => (
                         <FAQItem
                             key={index}
-                            question={question}
+                            question={item.question}
+                            answer={item.answer}
                             isOpen={openIndex === index}
                             onClick={() => handleClick(index)}
                         />

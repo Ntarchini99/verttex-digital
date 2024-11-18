@@ -1,7 +1,7 @@
 .whatsapp-container {
     position: fixed;
     bottom: 110px;
-    right: 70px;
+    right: 5px;
     z-index: 1000;
     animation: floatAnimation 2s ease-in-out infinite;
 }
@@ -29,13 +29,23 @@
     .whatsapp-container {
         position: fixed;
         bottom: 210px;
-        right: 4%;
+        right: -1%;
         z-index: 1000;
         animation: floatAnimation 2s ease-in-out infinite;
     }
     .whatsapp-container img {
-        width: 110px;
-        height: 110px;
-        padding: 8px;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 428px) {
+    .whatsapp-container {
+        right: -3%;
+    }
+    .whatsapp-container img {
+        width: 90px;
+        height: 90px;
     }
 }

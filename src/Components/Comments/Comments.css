@@ -141,72 +141,73 @@
 
 @media (max-width: 767px) {
   .testimonialsContainer {
-    padding: 4rem 1rem;
+      padding: 4rem 1rem;
   }
 
   .testimonials-wrapper {
-    padding: 0 1rem;
+
+      padding: 2rem 3rem;
   }
 
   .testimonialsGrid {
-    flex-wrap: nowrap;
-    overflow-x: hidden;
+      flex-wrap: nowrap;
+      overflow-x: hidden;
   }
 
   .testimonialCard {
-    min-width: 100%;
-    flex: 0 0 100%;
+      min-width: 100%;
+      flex: 0 0 100%;
   }
 
   .nav-button {
-    display: block;
+      display: block;
   }
 
   .page-indicators {
-    display: flex;
+      display: flex;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .testimonialsContainer {
-    padding: 8rem 2rem;
+      padding: 8rem 2rem;
   }
 
   .testimonials-wrapper {
-    padding: 0;
+      padding: 0;
   }
 
   .testimonialsGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
   }
 
   .testimonialCard {
-    min-width: unset;
-    width: 100%;
-    transform: none !important;
+      min-width: unset;
+      width: 100%;
+      transform: none !important;
   }
 }
 
 @media (min-width: 1025px) {
   .testimonialsContainer {
-    padding: 12rem;
+      padding: 12rem;
   }
 
   .testimonials-wrapper {
-    padding: 0;
+      padding: 0;
   }
 
   .testimonialsGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
   }
 
   .testimonialCard {
-    min-width: unset;
-    width: 100%;
-    transform: none !important;
+      min-width: unset;
+      width: 100%;
+      transform: none !important;
   }
 }

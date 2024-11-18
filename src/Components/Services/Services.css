@@ -147,12 +147,18 @@
     }
 
     .uxui-number-img {
-        width: 130px;
+        display: none;
+    }
+
+    .uxui-text h3 {
+        display: none;
     }
 
     .uxui-text p {
-        width: 100%;
+        width: 88%;
         margin: 0 auto 20px;
+        line-height: 1.8;
+        text-align: justify;
     }
 
     .uxui-image img {

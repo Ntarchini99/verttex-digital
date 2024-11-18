@@ -1,6 +1,7 @@
 .card-slider {
     position: relative;
-    width: 100%;
+    width: 85%;
+    margin-left: 7%;
     height: auto;
     min-height: 400px;
     background-color: #0B1D26;
@@ -67,7 +68,8 @@
 
 .card p {
     font-weight: normal;
-    color: #777;
+    color: #007C9D;
+    text-decoration: none;
 }
 
 .card-container:hover {
@@ -95,7 +97,7 @@
 
 @media (max-width: 429px) {
     .card-slider {
-        margin-bottom: -70px;
+        margin-bottom: -100px;
     }
     .card {
         min-width: 250px;

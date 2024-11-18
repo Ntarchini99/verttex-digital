@@ -13,7 +13,9 @@ function Home() {
                 <h1 className="home-title">Eleva tu presencia digital</h1>
                 <p className="home-subtitle">¿Estás listo para que tu negocio destaque en el mundo digital? Creamos experiencias digitales excepcionales a través
                     de desarrollo web innovador, diseño cuativador y gestión estratégica de redes sociales  que  capturen la atención de   tus visitantes  impulsando tus ventas. </p>
-                <button className="home-button">Escribenos</button>
+                <a href="mailto:verttexagenciadigital@gmail.com" className="home-button">
+                    Escribenos
+                </a>
             </div>
             <div className="home-arrow">
                 <a href="#how"><img src={arrowIcon} alt="Flecha" className="arrow-icon" /></a>
