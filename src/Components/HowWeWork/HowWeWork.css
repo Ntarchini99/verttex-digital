@@ -1,175 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
 .how-we-work {
-    background-color: #0B1D26;
+    position: relative;
     color: white;
-    padding: 6rem 2rem;
-    min-height: 80vh;
+    padding: 8rem 2rem;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.how-we-work__background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.how-we-work__grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(60deg);
+    transform-origin: top;
+    animation: gridMove 20s linear infinite;
+}
+
+.how-we-work__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    filter: blur(50px);
+}
+
+@keyframes gridMove {
+    0% {
+        transform: perspective(500px) rotateX(60deg) translateY(0);
+    }
+    100% {
+        transform: perspective(500px) rotateX(60deg) translateY(50px);
+    }
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    color: #fff;
+    font-size: 4rem;
     text-align: center;
-    margin-bottom: 4rem;
-    font-weight: 400;
+    margin-bottom: 6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    position: relative;
+}
+
+.title-decoration {
+    position: relative;
+    display: inline-block;
+}
+
+.title-decoration::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, transparent);
+    transform-origin: left;
+    animation: lineWidth 3s ease-out infinite;
+}
+
+@keyframes lineWidth {
+    0%, 100% { transform: scaleX(0.3); }
+    50% { transform: scaleX(1); }
 }
 
 .work-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
+    gap: 3rem;
 }
 
 .work-item {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideUp 0.6s ease-out forwards;
-}
-
-/* Animación secuencial para cada item */
-.work-item:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.work-item:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.work-item:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.work-item:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.work-item:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.work-item:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-.subtitle {
-    color: #00B4D8;
-    font-size: 1.1rem;
-    font-weight: 400;
-    margin: 0;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    padding-bottom: 0.5rem;
+    overflow: hidden;
 }
 
-.subtitle::after {
+.work-item::before {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 2rem;
-    height: 2px;
-    background-color: #00B4D8;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+    inset: 0;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), 
+                rgba(99, 102, 241, 0.1), 
+                transparent 100px);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-.work-item:hover .subtitle::after {
-    transform: scaleX(1);
-}
-
-.description {
-    color: #ffffff;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
-}
-
-.work-item:hover .description {
+.work-item:hover::before {
     opacity: 1;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+.work-item:hover {
+    transform: translateY(-10px);
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.3);
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.work-item__number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(99, 102, 241, 0.2);
+    margin-bottom: 1.5rem;
+    font-family: 'Space Grotesk', monospace;
 }
 
-@media (max-width: 1024px) {
+.work-item__header {
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 0.5rem;
+}
+
+.work-item__line {
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, transparent);
+    transition: width 0.3s ease;
+}
+
+.work-item:hover .work-item__line {
+    width: 60px;
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
     .main-title {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
-
+    
     .work-grid {
         gap: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
+    .how-we-work {
+        padding: 6rem 1.5rem;
+    }
+
+    .main-title {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .work-item {
+        padding: 1.5rem;
+    }
+
+    .work-item__number {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
     .main-title {
         font-size: 2.5rem;
     }
 
-    .work-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .how-we-work {
-        padding: 4rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-title {
-        font-size: 2rem;
-        margin-bottom: 3rem;
-    }
-
-    .work-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .how-we-work {
-        padding: 3rem 1rem;
-        min-height: auto;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-
-    .description {
-        font-size: 0.9rem;
+        padding: 4rem 1rem;
     }
 }

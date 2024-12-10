@@ -1,75 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 .card-slider {
     position: relative;
-    width: 85%;
-    margin-left: 7%;
-    height: auto;
-    min-height: 400px;
-    background-color: #0B1D26;
-    padding: 40px 0;
+    width: 100%;
+    min-height: 450px;
+    padding: 60px 0;
     overflow: hidden;
-    margin-bottom: 100px;
+}
+
+.card-slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
 }
 
 .card-container {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     overflow-x: hidden;
-    padding: 20px;
-    animation: scroll 30s linear infinite;
+    padding: 20px 40px;
+    animation: scroll 35s linear infinite;
     width: fit-content;
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(calc(-100% / 2));
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% / 2)); }
 }
 
 .card {
-    background-color: #fff;
-    min-width: 400px;
-    height: 300px;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    position: relative;
+    min-width: 320px;
+    height: 380px;
+    border: 1px solid rgba(123, 74, 255, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(123, 74, 255, 0.1),
+        transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(13, 12, 34, 0.9) 80%
+    );
+    pointer-events: none;
 }
 
 .card img {
     width: 100%;
-    height: 60%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.card h3,
-.card p {
-    font-size: 24px;
-    color: #333;
-    margin: 10px 0;
-    font-family: 'Arial', sans-serif;
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 30px rgba(123, 74, 255, 0.3);
+    border-color: rgba(123, 74, 255, 0.5);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    z-index: 1;
+    transform: translateY(30px);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover .card-content {
+    transform: translateY(0);
 }
 
 .card h3 {
-    font-weight: bold;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+    transform: translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover h3 {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .card p {
-    font-weight: normal;
-    color: #007C9D;
-    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    color: #b69eff;
+    margin: 8px 0 0;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover p {
+    transform: translateY(0);
+    color: #d4c4ff;
+}
+
+.card p::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #b69eff, #7b4aff);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card p:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .card-container:hover {
@@ -78,39 +161,48 @@
 
 @media (max-width: 768px) {
     .card-slider {
-        margin-bottom: 0px;
+        padding: 40px 0;
     }
+    
     .card {
-        min-width: 300px;
-        height: 250px;
+        min-width: 280px;
+        height: 340px;
     }
 
-    .card h3,
+    .card h3 {
+        font-size: 1.25rem;
+    }
+
     .card p {
-        font-size: 20px;
+        font-size: 0.9rem;
     }
 
     .card-container {
-        gap: 20px;
+        gap: 25px;
+        padding: 20px;
     }
 }
 
 @media (max-width: 429px) {
     .card-slider {
-        margin-bottom: -100px;
+        padding: 30px 0;
     }
+    
     .card {
-        min-width: 250px;
-        height: 200px;
+        min-width: 240px;
+        height: 300px;
     }
 
-    .card h3,
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
     .card p {
-        font-size: 18px;
+        font-size: 0.85rem;
     }
 
     .card-container {
-        gap: 15px;
-        padding: 10px;
+        gap: 20px;
+        padding: 15px;
     }
 }

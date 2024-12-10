@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react';
-import './Portfolio.css';
+import { useEffect } from 'react'
+import './Portfolio.css'
 
 const CardSlider = () => {
     const cards = [
@@ -58,6 +57,7 @@ const CardSlider = () => {
 
     useEffect(() => {
         const cardContainer = document.querySelector('.card-container');
+        const cards = document.querySelectorAll('.card');
 
         const resetScroll = () => {
             if (cardContainer) {
@@ -71,10 +71,23 @@ const CardSlider = () => {
             }
         };
 
+        const handleMouseMove = (e) => {
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        };
+
         cardContainer?.addEventListener('scroll', resetScroll);
+        document.addEventListener('mousemove', handleMouseMove);
 
         return () => {
             cardContainer?.removeEventListener('scroll', resetScroll);
+            document.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
 
@@ -84,21 +97,16 @@ const CardSlider = () => {
                 {duplicatedCards.map((card, index) => (
                     <div key={`${card.id}-${index}`} className="card">
                         <img src={card.img} alt={card.title} />
-                        <h3>{card.title}</h3>
-                        {card.link ? (
-                            <p 
-                                onClick={() => handleSubtitleClick(card.link)}
-                                style={{ 
-                                    cursor: 'pointer', 
-                                    color: '#007C9D', 
-                                    textDecoration: 'none' 
-                                }}
-                            >
-                                {card.subtitle}
-                            </p>
-                        ) : (
-                            <p>{card.subtitle}</p>
-                        )}
+                        <div className="card-content">
+                            <h3>{card.title}</h3>
+                            {card.link ? (
+                                <p onClick={() => handleSubtitleClick(card.link)}>
+                                    {card.subtitle}
+                                </p>
+                            ) : (
+                                <p>{card.subtitle}</p>
+                            )}
+                        </div>
                     </div>
                 ))}
             </div>

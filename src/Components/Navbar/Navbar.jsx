@@ -27,6 +27,7 @@ function Navbar() {
             </button>
 
             <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
+                <li><a href="/" onClick={() => setIsMenuOpen(false)}>Inicio</a></li>
                 <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Servicios</a></li>
                 <li><a href="#faq" onClick={() => setIsMenuOpen(false)}>Faq</a></li>
                 <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contacto</a></li>
