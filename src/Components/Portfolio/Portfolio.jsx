@@ -13,7 +13,7 @@ const CardSlider = () => {
         { 
             id: 2, 
             img: 'https://i.postimg.cc/QM2X81Jx/2.png', 
-            title: 'CloudHave', 
+            title: 'CloudHaven', 
             subtitle: 'Ver web',
             link: 'https://cloudhavenn.netlify.app/' 
         },
@@ -40,10 +40,17 @@ const CardSlider = () => {
         },
         { 
             id: 6, 
-            img: 'https://i.postimg.cc/VvR1WTQd/6.png', 
-            title: 'Verttex', 
-            subtitle: 'Ver web',
-            link: 'https://verttex.vercel.app/' 
+            img: 'https://i.postimg.cc/1tQbs7G9/herreria.png', 
+            title: 'Herrería Galván', 
+            subtitle: 'Ver sitio web',
+            link: 'https://galvanherreria.netlify.app/' 
+        },
+        { 
+            id: 7, 
+            img: 'https://i.postimg.cc/44wjR5mg/Screenshot-1.png', 
+            title: 'Aidforcoders', 
+            subtitle: 'Ver sitio web',
+            link: 'https://aidforcoders.tech/' 
         },
     ];
 
